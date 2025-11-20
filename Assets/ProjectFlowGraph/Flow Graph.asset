@@ -1,0 +1,311 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8342219818510166605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b2479a69f56cf54c96de81c44e8ad1a, type: 3}
+  m_Name: Portal
+  m_EditorClassIdentifier: 
+  FlowGraphId: 4408098e-0c80-4888-ba9e-90005d880ca5
+  NodeId: 37395c68-4a0c-400f-92d0-ee2a5255562c
+  NodeType: 1
+  NodeName: PortalStartGame
+  NodeDescription: 
+  InputPorts: []
+  OutputPorts:
+  - NodeId: 37395c68-4a0c-400f-92d0-ee2a5255562c
+    PortId: 2ca620ad-967a-4a3b-a6b0-0e1254c8c5c7
+    Direction: 1
+    Capacity: 0
+    Connections:
+    - 4cfb0037-9c79-4a5d-984a-88f2c3c4f67c
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  RunUpdate: 0
+  RunFixedUpdate: 0
+  RunLateUpdate: 0
+  NodeState: 0
+  CanBeDeleted: 1
+  Passthrough: 1
+  ClearGraphHistory: 0
+  Position: {x: 0.0000009536743, y: 156}
+  Trigger: 1
+  SignalPayload:
+    StreamId:
+      Category: Buttons
+      Name: StartButton
+      Custom: 1
+    SignalValueType: 0
+    IntegerValue: 0
+    BooleanValue: 0
+    FloatValue: 0
+    StringValue: 
+    ColorValue: {r: 0, g: 0, b: 0, a: 0}
+    Vector2Value: {x: 0, y: 0}
+    Vector3Value: {x: 0, y: 0, z: 0}
+    Vector4Value: {x: 0, y: 0, z: 0, w: 0}
+  ButtonId:
+    Category: Buttons
+    Name: StartButton
+    Custom: 1
+  ToggleId:
+    Category: None
+    Name: None
+    Custom: 0
+  CommandToggle: 2
+  ViewId:
+    Category: None
+    Name: None
+    Custom: 0
+  CommandShowHide: 0
+--- !u!114 &-8149022294694624401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c43f2597bc48340b6a8f2909b66d09, type: 3}
+  m_Name: Signal
+  m_EditorClassIdentifier: 
+  FlowGraphId: 4408098e-0c80-4888-ba9e-90005d880ca5
+  NodeId: e501667e-4974-4236-acb5-2c033df9db13
+  NodeType: 0
+  NodeName: Signal
+  NodeDescription: 
+  InputPorts:
+  - NodeId: e501667e-4974-4236-acb5-2c033df9db13
+    PortId: 71d3cff3-a51e-4d19-8f06-16bb6da61be9
+    Direction: 0
+    Capacity: 1
+    Connections:
+    - 9b4c2d3b-b654-4166-8843-22999e5cc10a
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  OutputPorts:
+  - NodeId: e501667e-4974-4236-acb5-2c033df9db13
+    PortId: 70f1c452-4385-46f7-a568-a5a5d9007951
+    Direction: 1
+    Capacity: 0
+    Connections: []
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  RunUpdate: 0
+  RunFixedUpdate: 0
+  RunLateUpdate: 0
+  NodeState: 2
+  CanBeDeleted: 1
+  Passthrough: 1
+  ClearGraphHistory: 0
+  Position: {x: 475, y: 156}
+  Payload:
+    StreamId:
+      Category: MainMusic
+      Name: Music_2
+      Custom: 1
+    SignalValueType: 0
+    IntegerValue: 0
+    BooleanValue: 0
+    FloatValue: 0
+    StringValue: 
+    ColorValue: {r: 0, g: 0, b: 0, a: 0}
+    Vector2Value: {x: 0, y: 0}
+    Vector3Value: {x: 0, y: 0, z: 0}
+    Vector4Value: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &-1448920296353458816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c43f2597bc48340b6a8f2909b66d09, type: 3}
+  m_Name: Signal
+  m_EditorClassIdentifier: 
+  FlowGraphId: 4408098e-0c80-4888-ba9e-90005d880ca5
+  NodeId: 50de4279-bade-41d4-a783-43b2a2fce13c
+  NodeType: 0
+  NodeName: SignalMainMusic
+  NodeDescription: 
+  InputPorts:
+  - NodeId: 50de4279-bade-41d4-a783-43b2a2fce13c
+    PortId: 4d66917a-abd5-43ac-a256-7a52222d5699
+    Direction: 0
+    Capacity: 1
+    Connections:
+    - 37054496-a1cb-4f83-865e-eacf0a8f9449
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  OutputPorts:
+  - NodeId: 50de4279-bade-41d4-a783-43b2a2fce13c
+    PortId: 894f5d26-5549-4dea-96cc-a4a69521db25
+    Direction: 1
+    Capacity: 0
+    Connections: []
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  RunUpdate: 0
+  RunFixedUpdate: 0
+  RunLateUpdate: 0
+  NodeState: 0
+  CanBeDeleted: 1
+  Passthrough: 1
+  ClearGraphHistory: 0
+  Position: {x: 475, y: 0}
+  Payload:
+    StreamId:
+      Category: MainMusic
+      Name: Music_1
+      Custom: 1
+    SignalValueType: 0
+    IntegerValue: 0
+    BooleanValue: 0
+    FloatValue: 0
+    StringValue: 
+    ColorValue: {r: 0, g: 0, b: 0, a: 0}
+    Vector2Value: {x: 0, y: 0}
+    Vector3Value: {x: 0, y: 0, z: 0}
+    Vector4Value: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02761efe598a45c98fa1baf4d446c6a7, type: 3}
+  m_Name: Flow Graph
+  m_EditorClassIdentifier: 
+  Id: 4408098e-0c80-4888-ba9e-90005d880ca5
+  GraphName: Flow Graph
+  GraphDescription: 
+  IsSubGraph: 0
+  Nodes:
+  - {fileID: 3437874671220066316}
+  - {fileID: 3406945152965999513}
+  - {fileID: -1448920296353458816}
+  - {fileID: -8342219818510166605}
+  - {fileID: -8149022294694624401}
+  RootNode: {fileID: 3437874671220066316}
+  ActiveNode: {fileID: -8149022294694624401}
+--- !u!114 &3406945152965999513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c43f2597bc48340b6a8f2909b66d09, type: 3}
+  m_Name: Signal
+  m_EditorClassIdentifier: 
+  FlowGraphId: 4408098e-0c80-4888-ba9e-90005d880ca5
+  NodeId: a966f61b-43f2-4270-8b33-c8da94f8a98f
+  NodeType: 0
+  NodeName: Signal
+  NodeDescription: 
+  InputPorts:
+  - NodeId: a966f61b-43f2-4270-8b33-c8da94f8a98f
+    PortId: 4cfb0037-9c79-4a5d-984a-88f2c3c4f67c
+    Direction: 0
+    Capacity: 1
+    Connections:
+    - 2ca620ad-967a-4a3b-a6b0-0e1254c8c5c7
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  OutputPorts:
+  - NodeId: a966f61b-43f2-4270-8b33-c8da94f8a98f
+    PortId: 9b4c2d3b-b654-4166-8843-22999e5cc10a
+    Direction: 1
+    Capacity: 0
+    Connections:
+    - 71d3cff3-a51e-4d19-8f06-16bb6da61be9
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  RunUpdate: 0
+  RunFixedUpdate: 0
+  RunLateUpdate: 0
+  NodeState: 0
+  CanBeDeleted: 1
+  Passthrough: 1
+  ClearGraphHistory: 0
+  Position: {x: 230, y: 156}
+  Payload:
+    StreamId:
+      Category: MainMusic
+      Name: Stop
+      Custom: 1
+    SignalValueType: 0
+    IntegerValue: 0
+    BooleanValue: 0
+    FloatValue: 0
+    StringValue: 
+    ColorValue: {r: 0, g: 0, b: 0, a: 0}
+    Vector2Value: {x: 0, y: 0}
+    Vector3Value: {x: 0, y: 0, z: 0}
+    Vector4Value: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3437874671220066316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751458f148144184aa69e35c01aecec0, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  FlowGraphId: 4408098e-0c80-4888-ba9e-90005d880ca5
+  NodeId: 7b12fd9b-1ad5-4f62-87c8-1a6e68c87d9c
+  NodeType: 2
+  NodeName: Start
+  NodeDescription: 
+  InputPorts: []
+  OutputPorts:
+  - NodeId: 7b12fd9b-1ad5-4f62-87c8-1a6e68c87d9c
+    PortId: 37054496-a1cb-4f83-865e-eacf0a8f9449
+    Direction: 1
+    Capacity: 0
+    Connections:
+    - 4d66917a-abd5-43ac-a256-7a52222d5699
+    Value: 
+    ValueTypeQualifiedName: 
+    CanBeDeleted: 0
+    CanBeReordered: 0
+  RunUpdate: 0
+  RunFixedUpdate: 0
+  RunLateUpdate: 0
+  NodeState: 0
+  CanBeDeleted: 0
+  Passthrough: 1
+  ClearGraphHistory: 1
+  Position: {x: 0, y: 0}
+  SystemNodeType: 0
