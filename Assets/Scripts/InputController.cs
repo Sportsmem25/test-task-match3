@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
-    public Camera cam;
+    [SerializeField] private Camera cam;
     private Gem   selectedGem;
     private bool  inputLocked = false;
 
@@ -68,7 +68,7 @@ public class InputController : MonoBehaviour
         GridManager.Instance.SwapGemsData(a, b);
         List<Gem> matches = GridManager.Instance.matchFinder.FindMatches(GridManager.Instance.cells);
 
-        // If matches is not null and the number of gems is greater than 0, then we check the gems for matches.
+        // ≈сли matches не равна null и и кол-во gems > 0, то проверка на на наличие совпадений (matches).
         if (matches != null && matches.Count > 0)
         {
             GridManager.Instance.ProcessMatches(matches);
@@ -101,7 +101,7 @@ public class InputController : MonoBehaviour
             yield return null;
         }
 
-        // Checking that the correct positions
+        // ѕроверка правильности расположени€
         a.transform.position = posB;
         b.transform.position = posA;
     }

@@ -4,8 +4,8 @@ using System.Collections;
 public class ComboPopupController : MonoBehaviour
 {
     public static ComboPopupController Instance;
-    public Transform root;
-    public GameObject popupPrefab;
+    [SerializeField] private Transform root;
+    [SerializeField] private GameObject popupPrefab;
 
     private void Awake()
     {

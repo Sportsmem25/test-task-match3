@@ -16,9 +16,9 @@ public class GridManager : MonoBehaviour
     }
 
    public Cell[,]                        cells;
+   public float                          swapAnimSpeed = 6f;
+   public float                          fallAnimSpeed = 8f;
    public MatchFinder                    matchFinder;
-   public float                          swapAnimSpeed;
-   public float                          fallAnimSpeed;
    [SerializeField] private GemFactory   gemFactory;
    [SerializeField] private Camera       cam;
    [SerializeField] private ScoreManager scoreManager;
@@ -91,7 +91,7 @@ public class GridManager : MonoBehaviour
             iter++;
             HashSet<Gem> unique = new HashSet<Gem>(matches);
 
-            // Replace the found gems with random ones until the matches disappear.
+            // Замена найденных gems случайными, пока совпадения не исчезнут
             foreach (var g in unique)
             {
                 Vector2Int pos = g.Cell.GridPos;
@@ -114,17 +114,17 @@ public class GridManager : MonoBehaviour
         Cell cellA = a.Cell;
         Cell cellB = b.Cell;
 
-        // Change link CurrentGem
+        // Изменение ссылки CurrentGem
         cells[cellA.GridPos.x, cellA.GridPos.y].CurrentGem = b;
         cells[cellB.GridPos.x, cellB.GridPos.y].CurrentGem = a;
 
-        // Updating fields in gems
+        // Обновление полей в gems
         a.SetCell(cells[cellB.GridPos.x, cellB.GridPos.y]);
         b.SetCell(cells[cellA.GridPos.x, cellA.GridPos.y]);
     }
 
     /// <summary>
-    /// Match Processing
+    /// Обработка совпадений
     /// </summary>
     /// <param name="matches"></param>
     public void ProcessMatches(List<Gem> matches)
@@ -137,14 +137,14 @@ public class GridManager : MonoBehaviour
         IsBusy = true;
         HashSet<Gem> unique = new HashSet<Gem>(matches);
 
-        // If scoreManager is not empty and there are more than 0 elements in the list, then we award points.
+        // Если scoreManager не пуста и в списке содержится более 0 элементов, то начисляются баллы.
         if (scoreManager != null && unique.Count > 0)
         {
             int totalPoints = unique.Count * pointsPerGem;
             scoreManager.Add(totalPoints);
         }
 
-        // Removing gems
+        // Удаление gems
         foreach (var g in unique)
         {
             var pos = g.Cell.GridPos;
@@ -154,7 +154,7 @@ public class GridManager : MonoBehaviour
 
         int count = unique.Count;
 
-        // If the number of matched gems is more than 4, then we display the popupText message.
+        // Если кол-во найденных совпадений > 4, то отображается всплывающее текстовое сообщение
         if (count >= 4)
         {
             string popupText = count switch
@@ -169,10 +169,10 @@ public class GridManager : MonoBehaviour
         }
 
 
-        // Waiting to see the destruction of gems
+        // Ожидание уничтожения gems
         yield return new WaitForSeconds(0.1f);
 
-        // When falling - move the gem down for each column
+        // При падении - перемещение gem вниз для каждого столбца
         for (int x = 0; x < width; x++)
         {
             int writeY = 0;
@@ -182,7 +182,7 @@ public class GridManager : MonoBehaviour
                 {
                     if (writeY != y)
                     {
-                        // Move gem to cell[x,writeY]
+                        // Движение gem к cell[x,writeY]
                         Gem gem = cells[x, y].CurrentGem;
                         cells[x, writeY].CurrentGem = gem;
                         gem.SetCell(cells[x, writeY]);
@@ -192,7 +192,7 @@ public class GridManager : MonoBehaviour
                 }
             }
 
-            // Filling with new gems from above
+            // Спавн gems сверху
             for (int y = writeY; y < height; y++)
             {
                 Vector3 spawnPos = new Vector3(x, y + 4, 0);
@@ -203,7 +203,7 @@ public class GridManager : MonoBehaviour
             }
         }
 
-        // Animate all gems falling until to their cell.WorldPosition
+        // Анимация падения всех gems пока не достигнут cell.WorldPosition
         yield return StartCoroutine(AnimateAllGemsToCells());
 
         List<Gem> newMatches = matchFinder.FindMatches(cells);

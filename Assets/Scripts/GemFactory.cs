@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class GemFactory : MonoBehaviour
 {
-    public Gem gemPrefab;
-    public GemType[] gemTypes;
+    [SerializeField] private Gem gemPrefab;
+    [SerializeField] private GemType[] gemTypes;
 
     [Tooltip("Parent under which all spawned gems will be placed")]
-    public Transform gemsParent;
+    [SerializeField] private Transform gemsParent;
 
     public Gem CreateRandomGem()
     {
